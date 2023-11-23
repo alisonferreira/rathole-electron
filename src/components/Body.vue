@@ -9,7 +9,7 @@
           <pre
             data-prefix=">"
             class="text-warning"
-          ><code>installing...</code></pre>
+          ><code>Iniciando...</code></pre>
           <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
         </div>
       </div>

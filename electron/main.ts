@@ -5,10 +5,10 @@ import {
   Tray,
   Menu,
   nativeImage,
+  autoUpdater
 } from "electron";
 import path from "node:path";
 import { glob } from "glob";
-import { updateElectronApp, UpdateSourceType } from "update-electron-app";
 import {
   setupTitlebar,
   attachTitlebarToWindow,
@@ -25,14 +25,11 @@ import {
 // │
 
 //Update Electron Software on Client's Computer
-updateElectronApp({
-  updateSource: {
-    type: UpdateSourceType.ElectronPublicUpdateService,
-    repo: 'github-user/repo'
-  },
-  updateInterval: '1 hour',
-  logger: require('electron-log')
-})
+
+const server = 'https://github.com/'
+const feed:any = `${server}alisonferreira/rathole-electron/${process.platform}-${process.arch}/${app.getVersion()}`
+
+autoUpdater.setFeedURL(feed)
 
 app.setAppUserModelId(process.execPath);
 setupTitlebar();
