@@ -1,6 +1,3 @@
-require('update-electron-app')({
-  logger: require('electron-log')
-})
 import {
   app,
   BrowserWindow,
