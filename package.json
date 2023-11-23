@@ -2,15 +2,12 @@
   "name": "rathole-electron",
   "private": true,
   "version": "0.0.0",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/alisonferreira/rathole-electron.git"
-    },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build && electron-builder",
     "preview": "vite preview"
   },
+  "repository": "https://github.com/alisonferreira/rathole-electron",
   "dependencies": {
     "@prisma/client": "^5.6.0",
     "custom-electron-titlebar": "^4.2.7",

@@ -1,3 +1,6 @@
+require('update-electron-app')({
+  logger: require('electron-log')
+})
 import {
   app,
   BrowserWindow,
@@ -5,7 +8,6 @@ import {
   Tray,
   Menu,
   nativeImage,
-  autoUpdater
 } from "electron";
 import path from "node:path";
 import { glob } from "glob";
@@ -23,15 +25,9 @@ import {
 // │ │ ├── main.js
 // │ │ └── preload.js
 // │
-
-//Update Electron Software on Client's Computer
-
-const server = 'https://github.com/'
-const feed:any = `${server}alisonferreira/rathole-electron/${process.platform}-${process.arch}/${app.getVersion()}`
-
-autoUpdater.setFeedURL(feed)
-
 app.setAppUserModelId(process.execPath);
+
+//TitleBar personalization module
 setupTitlebar();
 
 
